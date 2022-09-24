@@ -1,0 +1,9 @@
+pandas
+plotly
+numpy
+matplotlib
+sklearn=1.0.2
+sktime
+seaborn
+pystan
+pmdarima
