@@ -106,9 +106,9 @@ def forecastCI(df):
     #plot_ys(y_train, y_test, y_pred, labels=["y_train", "y_test", "y_pred"]);
     y_predci = forecaster.predict(fh)
     # fig = plot_series(y_train, y_test, y_pred, labels=["y_train", "y_test", "y_pred"])
-    df['y_trainci'] = y_trainci
-    df['y_testci'] =  y_testci
-    df['y_predci'] =  y_predci
+    df['y_trainca'] = y_trainci
+    df['y_testca'] =  y_testci
+    df['y_predca'] =  y_predci
     return df
 
 def forecastS(df):
@@ -477,7 +477,7 @@ def tundish():
 
         if  selected_option == "Forecast":
                 # Figures
-                forcast_ci = forecastCI(df)["y_predci"].dropna().reset_index(drop=True)
+                forcast_ci = forecastCI(df)["y_predca"].dropna().reset_index(drop=True)
                 forcast_al = forecastAL(df)["y_predal"].dropna().reset_index(drop=True)
                 forcast_mn = forecastMn(df)["y_predMn"].dropna().reset_index(drop=True)
                 forcast = pd.concat([forcast_ci, forcast_al, forcast_mn], axis=1)
@@ -492,7 +492,7 @@ def tundish():
                 st.plotly_chart(forplotAL(forecastAL(df)), use_container_width=True)
                 st.plotly_chart(forplotMn(forecastMn(df)), use_container_width=True)
                 st.plotly_chart(forplotS(forecastS(df)), use_container_width=True)
-                st.plotly_chart(ternary_plot(forcast, "y_predci", "y_predal", "y_predMn", "Forcasted NMI"),)
+                st.plotly_chart(ternary_plot(forcast, "y_predca", "y_predal", "y_predMn", "Forcasted NMI"),)
 
 
         if selected_option == "Decision":
