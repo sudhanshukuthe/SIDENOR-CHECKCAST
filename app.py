@@ -492,7 +492,7 @@ def tundish():
                 st.plotly_chart(forplotAL(forecastAL(df)), use_container_width=True)
                 st.plotly_chart(forplotMn(forecastMn(df)), use_container_width=True)
                 st.plotly_chart(forplotS(forecastS(df)), use_container_width=True)
-                st.plotly_chart(ternary_plot(forcast, "y_predci", "y_predal", "y_predMn", "Forcasted NMI"),)
+                st.plotly_chart(ternary_plot(forcast, "y_predci", "y_predal", "y_predMn", "Forcasted Al and Mn with respect to CI"),)
 
 
         if selected_option == "Decision":
