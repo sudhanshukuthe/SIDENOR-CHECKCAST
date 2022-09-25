@@ -510,7 +510,7 @@ def tundish():
                 data_for_plot = df[["Al", "Ca", "Si"]]
                 data_for_plot = data_for_plot.astype("float")
                 data_for_plot[["Al", "Ca", "Si"]] = scaler.fit_transform(data_for_plot)
-                st.plotly_chart(ternary_plot(data_for_plot, "Al2O3", "CaO", "SiO2", "Probable NMI_compositions"), use_container_width=True)
+                st.plotly_chart(ternary_plot(data_for_plot, "Al", "Ca", "Si", "Probable NMI regions with respect to steel composition"), use_container_width=True)
 
                 # DOWNLOAD CSV SHEET BUTTON
                 file_to_be_saved = 'Decisions_modelresults_{}.csv'.format(date)
